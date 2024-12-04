@@ -1,6 +1,6 @@
 "use client";
 
-import { Section, Container } from "@/components/elements";
+import { Section, Container } from "@/components/ui";
 import Link from "next/link";
 import clsx from "clsx";
 import navItems from "@/utils/nav";
@@ -36,10 +36,13 @@ export default function Header() {
 
   return (
     <Section tag="header" className="py-6">
-      <Container width="1200" className="grid grid-cols-3 items-center gap-6">
+      <Container
+        width="1200"
+        className="flex items-center justify-between gap-6"
+      >
         <Link href="/"> Elikem Daniels </Link>
         {/* Navigation */}
-        <nav className="mx-auto flex items-center gap-2 rounded-full bg-gray-100 p-2">
+        <nav className="flex items-center gap-2 rounded-full bg-gray-100 p-2">
           {navItems.map(({ href, name }) => (
             <Link
               key={href}
@@ -54,8 +57,6 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        {/* Current time in Accra */}
-        <time className="ml-auto">Accra : {currentTime}</time>
       </Container>
     </Section>
   );

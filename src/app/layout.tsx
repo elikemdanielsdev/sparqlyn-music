@@ -1,11 +1,7 @@
-import { directus, directusApiUrl } from "@/schemas/directus";
-import { readSingleton } from "@directus/sdk";
-
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Header from "@/components/elements/header";
-import Footer from "@/components/elements/footer";
-import "@/app/globals.css";
+import { Header, Footer } from "@/components/ui";
+import "@/app/frontend.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,18 +14,34 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const site = await directus.request(
-    readSingleton("global", { fields: ["name", "description", "image"] }),
-  );
+const briceBold = localFont({
+  src: [
+    {
+      path: "./fonts/Brice-Bold.woff",
+      weight: "900",
+    },
+    {
+      path: "./fonts/Brice-Bold.woff2",
+      weight: "900",
+    },
+    {
+      path: "./fonts/Brice-Bold.eot",
+      weight: "900",
+    },
+  ],
+  variable: "--font-brice-bold",
+  weight: "900",
+});
 
+export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: site.name,
-    description: site.description,
+    title: "Sparqlyn",
+    description:
+      "Sparqlyn is a music platform that allows you to create and share your own music.",
     openGraph: {
-      title: site.name,
-      description: site.description,
-      images: site.image ? [`${directusApiUrl}/assets/${site.image}`] : [],
+      title: "Sparqlyn",
+      description:
+        "Sparqlyn is a music platform that allows you to create and share your own music.",
     },
   };
 }
@@ -42,7 +54,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${briceBold.variable} antialiased`}
       >
         <Header />
         <main>{children}</main>

@@ -1,5 +1,4 @@
-import { header } from "motion/react-client";
-import Hero from "../sections/hero";
+import Hero from "../ui/hero";
 import Link from "next/link";
 
 const heroData = {
