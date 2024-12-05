@@ -108,9 +108,10 @@ export default function Home() {
                 aria-label="close sidebar"
                 className="drawer-overlay"
               ></label>
-              <ul className="menu min-h-full w-[520px] bg-amber-50 p-4 text-base-content">
+              <div className="text-crimson-800 menu min-h-full w-[560px] bg-amber-50 p-10 text-left text-xl">
                 {/* Sidebar content here */}
-              </ul>
+                <p>Some content goes here</p>
+              </div>
             </div>
           </div>
         </Container>
