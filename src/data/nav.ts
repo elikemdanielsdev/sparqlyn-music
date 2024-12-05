@@ -5,16 +5,20 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   {
-    name: "Start",
-    href: "/",
+    name: "Intro",
+    href: "#intro",
   },
   {
-    name: "Articles",
-    href: "/articles",
+    name: "Bio",
+    href: "#bio",
   },
   {
-    name: "Showcase",
-    href: "/showcase",
+    name: "Videos",
+    href: "#videos",
+  },
+  {
+    name: "Nominations",
+    href: "#nominations",
   },
 ];
 

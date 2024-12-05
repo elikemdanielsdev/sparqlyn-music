@@ -32,7 +32,10 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="to-crimson-500 overflow-hidden bg-gradient-to-tr from-black pb-0 pt-10">
+      <Section
+        id="intro"
+        className="to-crimson-500 overflow-hidden bg-gradient-to-tr from-black pb-0"
+      >
         <Container className="relative grid place-items-center">
           <Image
             src={sparqlynImage}
@@ -45,7 +48,7 @@ export default function Home() {
         </Container>
       </Section>
       {/* Bio Section */}
-      <Section className="bg-amber-50 py-28">
+      <Section id="bio" className="bg-amber-50 py-28">
         <Container
           width="830"
           className="grid place-items-center gap-10 text-center uppercase"
@@ -114,7 +117,10 @@ export default function Home() {
       </Section>
 
       {/* Video Section */}
-      <Section className="to-crimson-500 relative min-h-[80vh] bg-gradient-to-tr from-black">
+      <Section
+        id="videos"
+        className="to-crimson-500 relative min-h-[80vh] bg-gradient-to-tr from-black"
+      >
         {/* Video Background */}
         <video
           autoPlay
@@ -152,7 +158,7 @@ export default function Home() {
       </Section>
 
       {/* Nominations Section */}
-      <Section className="bg-amber-50 py-28">
+      <Section id="nominations" className="bg-amber-50 py-28">
         <Container
           width="830"
           className="grid place-items-center gap-10 text-center uppercase"
