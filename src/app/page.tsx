@@ -197,7 +197,7 @@ export default function Home() {
       </Section>
 
       {/* Awards Section */}
-      <Section id="nominations" className="bg-amber-50 py-28">
+      <Section id="awards" className="bg-amber-50 py-28">
         <Container
           width="830"
           className="grid place-items-center gap-10 text-center uppercase"

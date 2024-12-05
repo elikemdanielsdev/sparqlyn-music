@@ -20,6 +20,10 @@ const navItems: NavItem[] = [
     name: "Nominations",
     href: "#nominations",
   },
+  {
+    name: "Awards",
+    href: "#awards",
+  },
 ];
 
 export default navItems;

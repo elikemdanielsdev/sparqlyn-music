@@ -20,6 +20,10 @@ const socials: Social[] = [
     platform: "YouTube",
     link: "https://www.youtube.com/@iamsparqlyn",
   },
+  {
+    platform: "X",
+    link: "https://www.x.com/iamsparqlyn",
+  },
 ];
 
 export default socials;
