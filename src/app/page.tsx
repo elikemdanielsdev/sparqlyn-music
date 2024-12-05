@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Container, Heading, Section } from "@/components/ui";
 import { SparqlynSVG } from "@/assets/svg";
-import { Nominations } from "@/data";
+import { Nominations, Awards } from "@/data";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
@@ -187,6 +187,44 @@ export default function Home() {
                   <div className="flex items-center gap-[100px]">
                     <p>{nomination.type}</p>
                     <time>{nomination.year}</time>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </Section>
+
+      {/* Awards Section */}
+      <Section id="nominations" className="bg-amber-50 py-28">
+        <Container
+          width="830"
+          className="grid place-items-center gap-10 text-center uppercase"
+        >
+          <Heading
+            tag="h1"
+            size="display-1"
+            className="from-crimson-800 to-crimson-500 bg-gradient-to-tr bg-clip-text leading-[1] text-transparent"
+          >
+            Awards
+          </Heading>
+        </Container>
+        <Container className="mt-20">
+          <ul>
+            {Awards.map((award, index) => (
+              <li key={award.id}>
+                <div
+                  className={clsx(
+                    "flex items-center justify-between py-10 text-2xl",
+                    index === 0
+                      ? "border-y-crimson-800 border-y"
+                      : "border-b-crimson-800 border-b",
+                  )}
+                >
+                  <h3 className="text-2xl">{award.name}</h3>
+                  <div className="flex items-center gap-[100px]">
+                    <p>{award.type}</p>
+                    <time>{award.year}</time>
                   </div>
                 </div>
               </li>
