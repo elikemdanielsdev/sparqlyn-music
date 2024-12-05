@@ -3,47 +3,22 @@
 import { Section, Container } from "@/components/ui";
 import Link from "next/link";
 import clsx from "clsx";
-import navItems from "@/utils/nav";
+import { NavItems } from "@/data";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
 export default function Header() {
   const currentPath = usePathname();
-  const [currentTime, setCurrentTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options = {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true,
-        timeZone: "Africa/Accra",
-      };
-      const formatter = new Intl.DateTimeFormat("en-US", options as any);
-      const formattedTime = formatter.format(now);
-      setCurrentTime(formattedTime);
-    };
-
-    updateTime(); // Initial update
-    const interval = setInterval(updateTime, 1000); // Update every second
-
-    return () => {
-      clearInterval(interval); // Clean up the interval on component unmount
-    };
-  }, []);
 
   return (
-    <Section tag="header" className="py-6">
+    <Section tag="header" className="sticky top-0 z-40 bg-amber-50 py-[4px]">
       <Container
-        width="1200"
+        width="1400"
         className="flex items-center justify-between gap-6"
       >
         <Link href="/"> Elikem Daniels </Link>
         {/* Navigation */}
-        <nav className="flex items-center gap-2 rounded-full bg-gray-100 p-2">
-          {navItems.map(({ href, name }) => (
+        <nav className="flex items-center gap-2">
+          {NavItems.map(({ href, name }) => (
             <Link
               key={href}
               href={href}

@@ -21,7 +21,7 @@ type Props = {
   size?: keyof typeof sizes;
   tag?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   weight?: keyof typeof weights;
-  text: string;
+  children: React.ReactNode;
 };
 
 export default function Heading({
@@ -29,9 +29,11 @@ export default function Heading({
   size = "display-1",
   weight = "bold",
   className,
-  text,
+  children,
 }: Props) {
   return (
-    <Tag className={clsx(sizes[size], weights[weight], className)}>{text}</Tag>
+    <Tag className={clsx(sizes[size], weights[weight], className)}>
+      {children}
+    </Tag>
   );
 }

@@ -1,24 +1,22 @@
-import Hero from "../ui/hero";
-import Link from "next/link";
+import clsx from "clsx";
+import { Container, Section } from "@/components/ui";
 
-const heroData = {
-  title: "Hello",
-  subtitle: "World",
+type Props = {
+  className?: string;
+  title?: string;
+  subtitle?: string;
 };
 
-export default function HeroBlock() {
+export default function HeroBlock({ className, title, subtitle }: Props) {
   return (
-    <>
-      <Hero title={heroData.title} subtitle={heroData.subtitle} />
-      <header>
-        <Link href="/">Google Inc</Link>
-        <nav>
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
-        </nav>
-        <button>CTA now!</button>
-      </header>
-    </>
+    <Section className={clsx(className)}>
+      <Container
+        width="1400"
+        className="grid place-items-center gap-4 text-center"
+      >
+        <h1 className="text-7xl uppercase">{title}</h1>
+        <h2 className="text-3xl">{subtitle}</h2>
+      </Container>
+    </Section>
   );
 }

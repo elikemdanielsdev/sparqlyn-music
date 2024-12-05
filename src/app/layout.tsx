@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Header, Footer } from "@/components/ui";
+import { Header } from "@/components/ui";
 import "@/app/frontend.css";
 
 const geistSans = localFont({
@@ -22,10 +22,6 @@ const briceBold = localFont({
     },
     {
       path: "./fonts/Brice-Bold.woff2",
-      weight: "900",
-    },
-    {
-      path: "./fonts/Brice-Bold.eot",
       weight: "900",
     },
   ],
@@ -52,16 +48,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth bg-amber-50">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${briceBold.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${briceBold.variable} text-crimson-800 flex min-h-screen flex-col antialiased`}
       >
         <Header />
-        <main>{children}</main>
-        <Footer
-          title="Let's Connect"
-          subtitle="Book a 30-minute call with me to discuss your web project, and find out how I could be of help."
-        />
+        <main className="flex-grow">{children}</main>
       </body>
     </html>
   );

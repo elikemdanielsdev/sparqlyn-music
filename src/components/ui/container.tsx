@@ -1,11 +1,10 @@
 import clsx from "clsx";
 
 const widths = {
-  "1200": "max-w-screen-1200",
-  "1000": "max-w-screen-1000",
+  "1400": "max-w-screen-1400",
+  "830": "max-w-screen-830",
   "700": "max-w-screen-700",
-  "600": "max-w-screen-600",
-  "500": "max-w-screen-500",
+  "240": "max-w-screen-240",
 };
 
 type Props = {
@@ -15,7 +14,7 @@ type Props = {
 };
 
 export default function Container({
-  width = "1200",
+  width = "1400",
   className,
   children,
 }: Props) {

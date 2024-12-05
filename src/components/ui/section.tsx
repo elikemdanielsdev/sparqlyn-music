@@ -11,5 +11,5 @@ export default function Section({
   className,
   children,
 }: Props) {
-  return <Tag className={clsx("px-[4%] py-20", className)}>{children}</Tag>;
+  return <Tag className={clsx("px-[4%] py-32", className)}>{children}</Tag>;
 }
