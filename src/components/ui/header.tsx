@@ -51,7 +51,7 @@ export default function Header() {
               className={clsx(
                 "rounded-full px-4 py-3 font-semibold leading-none transition duration-300 hover:bg-amber-200/80",
                 activeSection === href.slice(1) &&
-                  "bg-amber-100 hover:bg-white",
+                  "bg-amber-100 hover:bg-amber-200/80",
               )}
             >
               {name}
