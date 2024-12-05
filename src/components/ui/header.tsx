@@ -49,9 +49,9 @@ export default function Header() {
               key={href}
               href={href}
               className={clsx(
-                "rounded-full px-4 py-3 leading-none transition duration-300 hover:bg-gray-200/80",
+                "rounded-full px-4 py-3 font-semibold leading-none transition duration-300 hover:bg-amber-200/80",
                 activeSection === href.slice(1) &&
-                  "bg-white font-medium shadow-sm hover:bg-white",
+                  "bg-amber-100 hover:bg-white",
               )}
             >
               {name}
