@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import { Header } from "@/components/ui";
 import "@/app/frontend.css";
@@ -53,7 +54,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${briceBold.variable} text-crimson-800 flex min-h-screen flex-col antialiased`}
       >
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow">
+          {children}
+          <SpeedInsights />
+        </main>
       </body>
     </html>
   );
