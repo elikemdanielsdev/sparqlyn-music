@@ -33,13 +33,13 @@ const briceBold = localFont({
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Sparqlyn",
+    title: "Sparqlyn Music",
     description:
-      "Sparqlyn is a music platform that allows you to create and share your own music.",
+      "Afrobeats musician, currently serving as a chief in his district.",
     openGraph: {
-      title: "Sparqlyn",
+      title: "Sparqlyn Music",
       description:
-        "Sparqlyn is a music platform that allows you to create and share your own music.",
+        "Afrobeats musician, currently serving as a chief in his district.",
     },
   };
 }
