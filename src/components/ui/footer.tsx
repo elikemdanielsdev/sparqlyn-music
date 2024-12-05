@@ -7,7 +7,7 @@ export default function Footer() {
     <Section
       tag="footer"
       id="videos"
-      className="to-crimson-500 relative bg-gradient-to-tr from-black"
+      className="to-crimson-500 sticky bottom-0 -z-50 bg-gradient-to-tr from-black"
     >
       <Container
         width="830"
