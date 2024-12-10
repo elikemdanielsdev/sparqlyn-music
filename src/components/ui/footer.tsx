@@ -7,7 +7,7 @@ export default function Footer() {
     <Section
       tag="footer"
       id="videos"
-      className="to-crimson-500 sticky bottom-0 -z-50 bg-gradient-to-tr from-black"
+      className="bg-gradient-to-tr from-black to-crimson-500"
     >
       <Container
         width="830"
@@ -26,7 +26,7 @@ export default function Footer() {
               key={link}
               href={link}
               target="_blank"
-              className="hover:text-crimson-800 btn h-2 rounded-full border border-amber-50 bg-transparent px-4 leading-tight text-amber-50 hover:bg-amber-50"
+              className="btn h-2 rounded-full border border-amber-50 bg-transparent px-4 leading-tight text-amber-50 hover:bg-amber-50 hover:text-crimson-800"
             >
               {platform}
             </Link>
